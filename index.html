@@ -1,11 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AIC Ngong Hills Teens Bible Verse Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #7f8acb, #cbb4d4);
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .verse-box {
+      background: rgba(255, 255, 255, 0.12);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 650px;
+      margin: 20px auto;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+      background-color: #5d5fef;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #4b4dd6;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <h1>AIC Teens App</h1>
+  <header>
+    AIC Ngong Hills Church Teens – August Skills Program
+  </header>
+
+  <main>
+    <h1>📖 Daily Bible Verse 📖</h1>
+    <div class="verse-box" id="verse-box">
+      "For God so loved the world that he gave his one and only Son, 
+      that whoever believes in him shall not perish but have eternal life." – John 3:16
+    </div>
+    <button onclick="newVerse()">✨ Show Another Verse ✨</button>
+  </main>
+
+  <footer>
+    &copy; 2025 AIC Ngong Hills Church Teens | Designed in our Skills Program
+  </footer>
+
+  <script>
+    const verses = [
+      `"For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life." – John 3:16`,
+      `"I can do all things through Christ who strengthens me." – Philippians 4:13`,
+      `"The Lord is my shepherd; I shall not want." – Psalm 23:1`,
+      `"Trust in the Lord with all your heart and lean not on your own understanding." – Proverbs 3:5`,
+      `"Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God." – Philippians 4:6`,
+      `"Your word is a lamp to my feet and a light to my path." – Psalm 119:105`,
+      `"Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go." – Joshua 1:9`,
+      `"Love is patient, love is kind. It does not envy, it does not boast, it is not proud." – 1 Corinthians 13:4`,
+      `"But those who hope in the Lord will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint." – Isaiah 40:31`,
+      `"Let your light shine before others, that they may see your good deeds and glorify your Father in heaven." – Matthew 5:16`,
+      `"Cast all your anxiety on him because he cares for you." – 1 Peter 5:7`,
+      `"The Lord is close to the brokenhearted and saves those who are crushed in spirit." – Psalm 34:18`,
+      `"And we know that in all things God works for the good of those who love him, who have been called according to his purpose." – Romans 8:28`,
+      `"Blessed are the peacemakers, for they will be called children of God." – Matthew 5:9`,
+      `"If God is for us, who can be against us?" – Romans 8:31`
+    ];
+
+    function newVerse() {
+      const randomIndex = Math.floor(Math.random() * verses.length);
+      document.getElementById('verse-box').textContent = verses[randomIndex];
+    }
+  </script>
 </body>
 </html>
